@@ -19,11 +19,11 @@ public class ClickManager : MonoBehaviour
 
             if (hit.collider != null)
             {
-                ClickableSquare square = hit.collider.GetComponent<ClickableSquare>();
+                Interactable interactable = hit.collider.GetComponent<Interactable>();
 
-                if (square != null)
+                if (interactable != null)
                 {
-                    square.OnClicked();
+                    interactable.OnInteract();
                 }
             }
             
