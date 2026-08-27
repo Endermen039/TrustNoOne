@@ -3,16 +3,31 @@ using UnityEngine.InputSystem;
 
 public class InputController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
+    public Vector2 ScreenPosition { get; private set; }
+    public Vector2 WorldPosition { get; private set; }
+
+    private Camera mainCamera;
+
+    private void Awake()
+    {
+        mainCamera = Camera.main;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 mouseScreenPosition = Mouse.current.position.ReadValue();
+       if (Mouse.current == null)
+        {
+            return;
+        }
 
-        Debug.Log(mouseScreenPosition);
+        ScreenPosition = Mouse.current.position.ReadValue();
 
+        Vector3 screenPosition = ScreenPosition;
+        screenPosition.z = Mathf.Abs(mainCamera.transform.position.z);
 
-        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+        WorldPosition = mainCamera.ScreenToWorldPoint(screenPosition);
+
     }
 }
