@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorInteractable : Interactable
 {
@@ -25,6 +26,10 @@ public class DoorInteractable : Interactable
             {
                 Debug.Log("The door won't budge, but you notice a slot for a key");
             }
+        }
+        else if (gameObject.name == "1_Door" && opened == true)
+        {
+            SceneManager.LoadScene(2);
         }
         
     }
