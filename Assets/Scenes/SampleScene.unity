@@ -187,9 +187,9 @@ GameObject:
   - component: {fileID: 209981257}
   - component: {fileID: 209981256}
   - component: {fileID: 209981259}
-  - component: {fileID: 209981258}
+  - component: {fileID: 209981260}
   m_Layer: 0
-  m_Name: Square2
+  m_Name: 1_Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,8 +244,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.324198, g: 1, b: 0.24056602, a: 1}
+  m_Sprite: {fileID: -4988462400131082715, guid: 5626320aa02221243b3b916a0a2595ad, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -263,25 +263,12 @@ Transform:
   m_GameObject: {fileID: 209981255}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 1.9608, z: 0}
-  m_LocalScale: {x: 0.6384, y: 0.6384, z: 1}
+  m_LocalPosition: {x: 1.408, y: 1.375, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &209981258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 209981255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaece8f07c164c14cb520cd3cc00824c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickableSquare
-  squareName: green_square
 --- !u!61 &209981259
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -320,7 +307,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 0.5625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -328,6 +315,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &209981260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209981255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cf468732944ea541b266a6a3e8e7808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KeyInteractable
+  inventoryManager: {fileID: 1669054738}
 --- !u!1 &219409478
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,9 +339,9 @@ GameObject:
   - component: {fileID: 219409480}
   - component: {fileID: 219409479}
   - component: {fileID: 219409482}
-  - component: {fileID: 219409481}
+  - component: {fileID: 219409483}
   m_Layer: 0
-  m_Name: Square1
+  m_Name: 1_Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,8 +396,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9339623, g: 0.2599235, b: 0.2599235, a: 1}
+  m_Sprite: {fileID: -7062462546573273203, guid: 1b4e81bb7e48dcc4392b051629536380, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -415,25 +415,12 @@ Transform:
   m_GameObject: {fileID: 219409478}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.01, y: 1.9608, z: 0}
+  m_LocalPosition: {x: -1.015, y: 1.687, z: 0}
   m_LocalScale: {x: 0.6384, y: 0.6384, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &219409481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 219409478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaece8f07c164c14cb520cd3cc00824c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickableSquare
-  squareName: red_square
 --- !u!61 &219409482
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -472,7 +459,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -480,6 +467,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &219409483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219409478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d82816a87b3a4418a448187aeb7fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DoorInteractable
+  inventoryManager: {fileID: 1669054738}
+  doorSpriteRenderer: {fileID: 219409479}
+  openDoorSprite: {fileID: -871288973413472407, guid: 30b0cf1db01cd044d912cd1efefeff55, type: 3}
 --- !u!1 &350433730
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +608,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.13207549, g: 0.09905662, b: 0.10697903, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -656,7 +658,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.24, y: 1.74, z: -10}
+  m_LocalPosition: {x: -0.96, y: 1.49, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -695,8 +697,8 @@ MonoBehaviour:
   m_LightType: 4
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.3773585, g: 0.3773585, b: 0.3773585, a: 1}
+  m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -757,9 +759,9 @@ GameObject:
   - component: {fileID: 768673825}
   - component: {fileID: 768673824}
   - component: {fileID: 768673827}
-  - component: {fileID: 768673826}
+  - component: {fileID: 768673828}
   m_Layer: 0
-  m_Name: Square3
+  m_Name: 1_Picture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -814,7 +816,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 7734141462745806936, guid: fb35f9055096c354f9a340005d68f41f, type: 3}
   m_Color: {r: 0.4198113, g: 0.6757391, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -833,25 +835,12 @@ Transform:
   m_GameObject: {fileID: 768673823}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.9608, z: 0}
+  m_LocalPosition: {x: 0.194, y: 2.144, z: 0}
   m_LocalScale: {x: 0.6384, y: 0.6384, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &768673826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 768673823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaece8f07c164c14cb520cd3cc00824c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClickableSquare
-  squareName: blue_square
 --- !u!61 &768673827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -898,7 +887,19 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1880775597
+--- !u!114 &768673828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768673823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7898687a5b152943882f76a268a7bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PictureInteractable
+--- !u!1 &1669054737
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -906,22 +907,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1880775599}
-  - component: {fileID: 1880775600}
+  - component: {fileID: 1669054739}
+  - component: {fileID: 1669054738}
   m_Layer: 0
-  m_Name: Interactable
+  m_Name: InventoryManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1880775599
+--- !u!114 &1669054738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669054737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31d0159f5695ec04a9ad481be00690e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  items: []
+--- !u!4 &1669054739
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880775597}
+  m_GameObject: {fileID: 1669054737}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.67268, y: 1.38476, z: 0}
@@ -930,18 +944,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1880775600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880775597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaece8f07c164c14cb520cd3cc00824c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Interactable
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -953,4 +955,4 @@ SceneRoots:
   - {fileID: 768673825}
   - {fileID: 39818290}
   - {fileID: 350433732}
-  - {fileID: 1880775599}
+  - {fileID: 1669054739}
