@@ -9,19 +9,22 @@ public class CameraScroll : MonoBehaviour
     [SerializeField] private float minX = -10;
     [SerializeField] private float maxX = 8;
 
+    public bool canMove = true;
+
     void Update()
     {
 
         Vector3 mousePosition = Mouse.current.position.ReadValue();
-
-        if (mousePosition.x <= edgeSize)
+        if (canMove)
         {
+            if (mousePosition.x <= edgeSize)
+            {
             transform.position += Vector3.left * moveSpeed * Time.deltaTime;
-        }
-        else if (mousePosition.x >= Screen.width - edgeSize)
-        {
+            }
+            else if (mousePosition.x >= Screen.width - edgeSize)
+            {
             transform.position += Vector3.right * moveSpeed * Time.deltaTime;
-        }
+            }
 
         float clampedX = Mathf.Clamp(transform.position.x, minX, maxX);
 
@@ -30,5 +33,11 @@ public class CameraScroll : MonoBehaviour
             transform.position.y,
             transform.position.z
         );
+        }
+        else
+        {
+            return;
+        }
+
     }
 }

@@ -10,15 +10,26 @@ public class DialogueManager : MonoBehaviour
 
     public bool IsDialogueActive => dialogueText.gameObject.activeSelf;
 
+    private bool canDismiss;
+
     public void ShowDialogue(string message)
     {
         dialogueText.gameObject.SetActive(true);
         dialogueText.text = message;
+
+        canDismiss = false;
+        StartCoroutine(AllowDismiss());
+    }
+
+    private IEnumerator AllowDismiss()
+    {
+        yield return null;
+        canDismiss = true;
     }
 
     private void Update()
     {
-        if (IsDialogueActive && Mouse.current.leftButton.wasPressedThisFrame)
+        if (IsDialogueActive && canDismiss && Mouse.current.leftButton.wasPressedThisFrame)
         {
             dialogueText.gameObject.SetActive(false);
         }
