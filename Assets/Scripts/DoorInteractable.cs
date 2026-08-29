@@ -6,7 +6,7 @@ public class DoorInteractable : Interactable
     [SerializeField] private InventoryManager inventoryManager;
     [SerializeField] private SpriteRenderer doorSpriteRenderer;
     [SerializeField] private Sprite openDoorSprite;
-
+    [SerializeField] DialogueManager dialogueManager;
     private bool opened = false;
 
     public override void OnInteract()
@@ -16,6 +16,7 @@ public class DoorInteractable : Interactable
             if (inventoryManager.HasItem("1_Key"))
             {
                 Debug.Log("The door was unlocked with the key");
+                dialogueManager.ShowDialogue("The door was unlocked with the key");
                 opened = true;
                 inventoryManager.RemoveItem("1_Key");
 
@@ -25,6 +26,7 @@ public class DoorInteractable : Interactable
             else
             {
                 Debug.Log("The door won't budge, but you notice a slot for a key");
+                dialogueManager.ShowDialogue("The door won't budge, but you notice a slot for a key");
             }
         }
         else if (gameObject.name == "1_Door" && opened == true)
