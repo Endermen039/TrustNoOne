@@ -4,6 +4,7 @@ public class KeyInteractable : Interactable
 {
     [SerializeField] private InventoryManager inventoryManager;
     [SerializeField] DialogueManager dialogueManager;
+    public bool activeState = true;
 
     public override void OnInteract()
     {
@@ -16,6 +17,8 @@ public class KeyInteractable : Interactable
             inventoryManager.AddItem("1_Key");
 
             gameObject.SetActive(false);
+
+            activeState = false;
         }
     }
 }
