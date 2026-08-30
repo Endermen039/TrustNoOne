@@ -7,8 +7,7 @@ public class SafeUI : MonoBehaviour
     [SerializeField] private CameraScroll cameraMovement;
     [SerializeField] DialogueManager dialogueManager;
     [SerializeField] private BoxCollider2D safeCollider;
-
-
+    public bool passCheck = false;
     private string currentCode = "";
 
     public void EnterNumber(int n)
@@ -34,6 +33,7 @@ public class SafeUI : MonoBehaviour
             gameObject.SetActive(false);
             dialogueManager.ShowDialogue("The safe opened revealing a flashlight emitting a purple hue");
             cameraMovement.canMove = true;
+            passCheck = true;
         }
     }
     public void ExitSafe()
